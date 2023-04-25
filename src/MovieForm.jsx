@@ -17,19 +17,35 @@ function MovieForm(props) {
     setNewMovie((prevMovie) => ({ ...prevMovie, [name]: value }));
   };
 
+  
+  
+
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor="title">Title:</label>
-      <input type="text" name="title" value={newMovie.title} onChange={changeHandler} />
-      <label htmlFor="director">Director:</label>
-      <input type="text" name="director" value={newMovie.director} onChange={changeHandler} />
-      <label htmlFor="year">Release date:</label>
-      <input type="text" name="year" value={newMovie.year} onChange={changeHandler} />
-      <label htmlFor="rating">Rating:</label>
-      <input type="text" name="rating" value={newMovie.rating} onChange={changeHandler} />
-      <label htmlFor="genre">Genre:</label>
-      <input type="text" name="genre" value={newMovie.genre} onChange={changeHandler} />
-      <button type="submit">Add Movie</button>
+      <div>
+        <label htmlFor="title">Title:</label>
+      <input type="string" name="title" value={newMovie.title} onChange={changeHandler} />
+      </div>
+      <div>
+        <label htmlFor="director">Director:</label>
+      <input type="string" name="director" value={newMovie.director} onChange={changeHandler} />
+      </div>
+      <div>
+         <label htmlFor="year">Release date:</label>
+      <input type="date" name="year" value={newMovie.year} onChange={changeHandler} />
+      </div>
+      <div> <label htmlFor="rating">Rating:</label>
+      <input type="number" name="rating" value={newMovie.rating} onChange={changeHandler} />
+      </div>
+      <div> 
+        <label htmlFor="genre">Genre:</label>
+      <input type="string" name="genre" value={newMovie.genre} onChange={changeHandler} />
+      </div>
+      <div> <button type="submit">Add Movie</button></div>
+     
+     
+     
+     
     </form>
   );
 }
